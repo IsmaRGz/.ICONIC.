@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICONIC - Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Ventas ICONIC</h1>
+    <div class="form-container">
+        <input type="text" id="nombre" placeholder="Nombre del artículo">
+        <input type="number" id="costo" placeholder="Costo">
+        <input type="number" id="precio" placeholder="Precio de venta">
+        <button onclick="agregarArticulo()">Agregar</button>
+    </div>
+    <div class="resumen">
+        <p>Total ganado: $<span id="ganancias">0</span></p>
+        <p>Total recuperado: $<span id="recuperado">0</span></p>
+    </div>
+    <table id="inventario">
+        <thead>
+            <tr>
+                <th>Artículo</th>
+                <th>Costo</th>
+                <th>Precio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="acciones">
+        <button onclick="exportarCSV()">Exportar Base de Datos</button>
+        <input type="file" id="importarArchivo" accept=".csv" onchange="importarCSV()">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
